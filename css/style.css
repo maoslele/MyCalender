@@ -37,6 +37,10 @@ td.today {
   font-weight: bold;
 }
 
+td.holiday {
+  color: red;
+}
+
 #prev, #next, #today {
  cursor: pointer;
  user-select: none;

@@ -89,6 +89,9 @@ console.clear();
         if (date.isDisabled) {
           td.classList.add('disabled');
         }
+        //if (date.isHoliday) {
+        //  td.classList.add('holiday');
+        //}
         tr.appendChild(td);
       });
       document.querySelector('tbody').appendChild(tr);
@@ -124,6 +127,10 @@ console.clear();
     month = today.getMonth();
     createCalender();
   });
+
+    //document.getElementById('holiday').textContent= holidays_jp.between(new Date('2020-07-23'), new Date('2020-07-25'));
+    //let holidays = holiday_jp.between(new Date('2010-09-14'), new Date('2010-09-21'));
+    //console.log(holidays[0]['name']); // 敬老の日
 
   createCalender();
 
