@@ -18,6 +18,7 @@ console.clear();
         isDisabled: true,
       });
     }
+
     return dates;
 
   }
@@ -32,6 +33,9 @@ console.clear();
         isToday: false,
         isDisabled: false,
       });
+    }
+    if (year === today.getFullYear() && month === today.getMonth()) {
+      dates[today.getDate() - 1].isToday = true;
     }
     return dates;
   }
@@ -97,8 +101,6 @@ console.clear();
     renderWeeks();
   }
 
-  createCalender();
-
   document.getElementById('prev').addEventListener('click', () => {
     month--;
     if (month < 0) {
@@ -116,5 +118,13 @@ console.clear();
     }
     createCalender();
   });
+
+  document.getElementById('today').addEventListener('click', () => {
+    year = today.getFullYear();
+    month = today.getMonth();
+    createCalender();
+  });
+
+  createCalender();
 
 }
